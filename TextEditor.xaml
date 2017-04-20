@@ -1,0 +1,23 @@
+﻿<Window x:Class="OneTestProject.TextEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OneTestProject"
+        mc:Ignorable="d"        
+        Height="300" Width="600"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Name="Text" Text="" TextWrapping="Wrap" AcceptsReturn="True"/>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button Margin="2,2,2,2"  Padding="2" Content="ОК" Click="btn_ok"/>
+            <Button Margin="2,2,2,2"  Padding="2" IsCancel="True" Content="Отмена" Click="btn_cancel"/>           
+        </StackPanel>
+    </Grid>
+</Window>
